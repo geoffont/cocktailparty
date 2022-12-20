@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/cocktailparty/static/css/main.5499552b.css",
+    "main.js": "/cocktailparty/static/js/main.4383ece1.js",
+    "static/media/verreBallon.jpg": "/cocktailparty/static/media/verreBallon.c5a01c74843dcfc4e0c2.jpg",
+    "static/media/Img2.jpg": "/cocktailparty/static/media/Img2.73883afedbec68b242e7.jpg",
+    "static/media/Img1.jpg": "/cocktailparty/static/media/Img1.dcf99ba7b42a11b03607.jpg",
+    "static/media/Img5.jpg": "/cocktailparty/static/media/Img5.ee7de6ef7b90ac3725cf.jpg",
+    "static/media/Img7.jpg": "/cocktailparty/static/media/Img7.e17dbcf18e4a157caa1b.jpg",
+    "static/media/Img8.jpg": "/cocktailparty/static/media/Img8.47885058401fc582e667.jpg",
+    "static/media/Img10.jpg": "/cocktailparty/static/media/Img10.af5b564d39ec0f348bcc.jpg",
+    "static/media/Img3.jpg": "/cocktailparty/static/media/Img3.20e5d02a22c443850144.jpg",
+    "static/media/Img9.jpg": "/cocktailparty/static/media/Img9.6ab3c63bbf4ba804a817.jpg",
+    "static/media/Img4.jpg": "/cocktailparty/static/media/Img4.c655eed1d963367d3885.jpg",
+    "static/media/Img6.jpg": "/cocktailparty/static/media/Img6.b1886b55613d27ef045d.jpg",
+    "static/media/tulipeHurricane.jpg": "/cocktailparty/static/media/tulipeHurricane.296f98834eea236ce43e.jpg",
+    "static/media/tumbler.jpg": "/cocktailparty/static/media/tumbler.33de627f02e6aa3aea79.jpg",
+    "static/media/flute.jpg": "/cocktailparty/static/media/flute.37ae1f3da5bb546b8ad3.jpg",
+    "static/media/barman.jpg": "/cocktailparty/static/media/barman.afdc354b7c3f3bbf03ae.jpg",
+    "static/media/margarita.jpg": "/cocktailparty/static/media/margarita.4455e077fe18f407ce74.jpg",
+    "static/media/facebook-cocktail.png": "/cocktailparty/static/media/facebook-cocktail.e185683c0fe8f5ef4689.png",
+    "static/media/verreBallon.png": "/cocktailparty/static/media/verreBallon.4957685ce6557003e70d.png",
+    "static/media/night-sunset.jpg": "/cocktailparty/static/media/night-sunset.642e1ad4ea4f1f99a4bf.jpg",
+    "static/media/logo-api.png": "/cocktailparty/static/media/logo-api.eccaa0a07e836e7a8aab.png",
+    "static/media/VerresCocktails.jpg": "/cocktailparty/static/media/VerresCocktails.4c3c1daf0dfacf1052f0.jpg",
+    "static/media/shaker.jpg": "/cocktailparty/static/media/shaker.d4c482d08401c3d9827b.jpg",
+    "static/media/mixeur.jpg": "/cocktailparty/static/media/mixeur.24ec6f6ef049ebce3ceb.jpg",
+    "static/media/1001cocktails.png": "/cocktailparty/static/media/1001cocktails.19d8ae422a7a00a0f167.png",
+    "static/media/complet.jpg": "/cocktailparty/static/media/complet.cf9d3faf94a8ae2d50a5.jpg",
+    "static/media/VerreDoseur.jpg": "/cocktailparty/static/media/VerreDoseur.cc20cc949200c9c98383.jpg",
+    "static/media/concasseurGlace.webp": "/cocktailparty/static/media/concasseurGlace.15474f8a109b739359c7.webp",
+    "static/media/VerreMelangeur.jpg": "/cocktailparty/static/media/VerreMelangeur.939b37b333517d69fcdc.jpg",
+    "static/media/cocktail-logo.png": "/cocktailparty/static/media/cocktail-logo.508b04fe8ba4ca653a26.png",
+    "static/media/passoire.jpg": "/cocktailparty/static/media/passoire.418b1d67f8169ae7c8fc.jpg",
+    "index.html": "/cocktailparty/index.html",
+    "main.5499552b.css.map": "/cocktailparty/static/css/main.5499552b.css.map",
+    "main.4383ece1.js.map": "/cocktailparty/static/js/main.4383ece1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5499552b.css",
+    "static/js/main.4383ece1.js"
+  ]
+}
