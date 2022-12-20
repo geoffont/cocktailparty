@@ -1,0 +1,42 @@
+.cocktaillist {
+  box-shadow: 0px -2px 10px -2px #a62424, 0px 10px 13px -7px #a62424,
+    inset 0px -3px 15px 3px #0a0d40;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: 5px;
+  width: 30vw;
+  min-width: 20vw;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(213, 118, 213),
+    rgb(38, 24, 195)
+  );
+  color: white;
+  margin: 1vw;
+  margin-top: 5rem;
+}
+
+.cocktail-footer {
+  padding: 1.5rem;
+}
+.cocktail-footer h3,
+.cocktail-footer h4,
+.cocktail-footer p {
+  margin-bottom: 0.3rem;
+  font-size: 1vw;
+  font-family: "Courgette", cursive;
+}
+.cocktail-footer p {
+  margin-bottom: 0.5rem;
+}
+.button {
+  background-color: #0a0d40;
+  color: white;
+  border-radius: 5px;
+  padding: 1em;
+  text-align: center;
+  border-style: none;
+}
+.button:hover {
+  cursor: pointer;
+}

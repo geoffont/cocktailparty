@@ -1,0 +1,25 @@
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 18vh;
+  box-shadow: 0px 10px 13px -7px #a62424, 1px 7px 20px -7px #a62424;
+  margin-bottom: 2vh;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1vh;
+}
+
+.logo1 {
+  height: 20vh;
+}
+
+.header h1 {
+  color: white;
+  font-size: 5vw;
+  font-family: "Alex Brush";
+}

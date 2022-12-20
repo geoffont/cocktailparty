@@ -1,0 +1,81 @@
+.Verre {
+  font-size: 2vw;
+}
+
+.Verre,
+.Verre h2 {
+  color: white;
+}
+
+.Verre h2 {
+  text-shadow: 5px 2px 1px #a62424;
+  font-size: 2.3vw;
+  font-family: "Courgette", cursive;
+  margin-bottom: 0.5rem;
+}
+
+.Verre h3 {
+  font-size: 2vw;
+  text-shadow: 5px 2px 1px #a62424;
+  margin-bottom: 0.8rem;
+}
+
+.texteVerre p {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.intro p {
+  padding-bottom: 0.8rem;
+  font-size: 2vw;
+}
+
+.imgVerre1,
+.imgVerre2,
+.imgVerre3,
+.imgVerre4,
+.imgVerre5 {
+  width: 35vw;
+  border-radius: 25% 10%;
+}
+
+.tumbler,
+.verreBallon,
+.tulipeHurricane {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 1.7rem;
+}
+
+.margarita,
+.flute {
+  display: flex;
+  margin-top: 1.7rem;
+  box-shadow: 0px 10px 13px -7px #0a0d40, 1px 7px 20px -7px #0a0d40;
+}
+
+.tumbler,
+.verreBallon,
+.intro {
+  box-shadow: 0px 10px 13px -7px #0a0d40, 1px 7px 20px -7px #0a0d40;
+}
+
+@media only screen and (max-width: 400px) {
+  .tumbler,
+  .verreBallon,
+  .tulipeHurricane,
+  .margarita,
+  .flute {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imgVerre1,
+  .imgVerre2,
+  .imgVerre3,
+  .imgVerre4,
+  .imgVerre5 {
+    width: 30vw;
+    border-radius: 10% 25%;
+  }
+}
