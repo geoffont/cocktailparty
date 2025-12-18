@@ -90,7 +90,7 @@ const Footer = () => {
               >
                 <span className="text-lg">Créé avec</span>
                 <Heart size={20} className="text-red-400 animate-pulse" />
-                <span className="text-lg font-medium text-white">par Nelly, Sandra & Geoffroy</span>
+                <span className="text-lg font-medium text-white">par Geoffroy FONTAINE</span>
               </motion.div>
 
               <motion.div 
