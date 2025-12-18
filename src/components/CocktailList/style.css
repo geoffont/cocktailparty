@@ -28,13 +28,13 @@
   }
 }
 
-/* Recipe details animation */
+/* Recipe details */
 .recipe-details {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  backdrop-filter: blur(10px);
+  background: var(--bg-secondary);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  margin-top: 1rem;
 }
 
 /* Hover effects for cocktail cards */
@@ -43,15 +43,16 @@
 }
 
 .cocktail-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-200);
 }
 
 .cocktail-card:hover .cocktail-image {
   transform: scale(1.05);
 }
 
-/* Image overlay effects */
+/* Image overlay effects - subtle on light theme */
 .image-overlay {
   position: absolute;
   top: 0;
@@ -61,7 +62,7 @@
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(0, 0, 0, 0.3) 100%
+    rgba(0, 0, 0, 0.1) 100%
   );
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -71,15 +72,17 @@
   opacity: 1;
 }
 
-/* Badge hover effects */
+/* Badge styles */
 .badge-alcoholic {
-  background: linear-gradient(135deg, var(--accent-500), var(--accent-600));
-  color: white;
+  background: linear-gradient(135deg, var(--accent-50), var(--accent-100));
+  color: var(--accent-700);
+  border: 1px solid var(--accent-300);
 }
 
 .badge-non-alcoholic {
-  background: linear-gradient(135deg, var(--success-500), var(--success-600));
-  color: white;
+  background: linear-gradient(135deg, var(--success-50), #e8f5e9);
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
 }
 
 /* Responsive adjustments */
@@ -87,7 +90,7 @@
   .cocktail-card {
     margin-bottom: 1rem;
   }
-  
+
   .ingredient-badges {
     flex-wrap: wrap;
     gap: 0.25rem;

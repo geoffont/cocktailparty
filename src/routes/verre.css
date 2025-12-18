@@ -1,33 +1,41 @@
 .Verre {
-  font-size: 2vw;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-family: var(--font-body);
+  color: var(--neutral-700);
+  padding: 2rem 0;
 }
 
 .Verre,
 .Verre h2 {
-  color: white;
+  color: var(--neutral-900);
 }
 
 .Verre h2 {
-  text-shadow: 5px 2px 1px #a62424;
-  font-size: 2.3vw;
-  font-family: "Courgette", cursive;
-  margin-bottom: 0.5rem;
+  font-size: clamp(1.5rem, 2.3vw, 2.5rem);
+  font-family: var(--font-heading);
+  font-weight: var(--font-semibold);
+  margin-bottom: 1rem;
+  line-height: var(--leading-snug);
 }
 
 .Verre h3 {
-  font-size: 2vw;
-  text-shadow: 5px 2px 1px #a62424;
+  font-size: clamp(1.25rem, 2vw, 1.875rem);
+  font-family: var(--font-heading);
+  font-weight: var(--font-medium);
+  color: var(--neutral-800);
   margin-bottom: 0.8rem;
 }
 
 .texteVerre p {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  color: var(--neutral-700);
+  line-height: var(--leading-relaxed);
 }
 
 .intro p {
   padding-bottom: 0.8rem;
-  font-size: 2vw;
+  font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
 .imgVerre1,
@@ -35,8 +43,47 @@
 .imgVerre3,
 .imgVerre4,
 .imgVerre5 {
-  width: 35vw;
-  border-radius: 25% 10%;
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imgVerre1:hover,
+.imgVerre2:hover,
+.imgVerre3:hover,
+.imgVerre4:hover,
+.imgVerre5:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.intro,
+.tumbler,
+.margarita,
+.verreBallon,
+.flute,
+.tulipeHurricane {
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: 2.5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  transition: all 0.3s ease;
+}
+
+.intro:hover,
+.tumbler:hover,
+.margarita:hover,
+.verreBallon:hover,
+.flute:hover,
+.tulipeHurricane:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
 }
 
 .tumbler,
@@ -44,29 +91,23 @@
 .tulipeHurricane {
   display: flex;
   flex-direction: row-reverse;
-  margin-top: 1.7rem;
+  gap: 2rem;
+  align-items: center;
 }
 
 .margarita,
 .flute {
   display: flex;
-  margin-top: 1.7rem;
-  box-shadow: 0px 10px 13px -7px #0a0d40, 1px 7px 20px -7px #0a0d40;
+  gap: 2rem;
+  align-items: center;
 }
 
-.tumbler,
-.verreBallon,
-.intro {
-  box-shadow: 0px 10px 13px -7px #0a0d40, 1px 7px 20px -7px #0a0d40;
-}
-
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 768px) {
   .tumbler,
   .verreBallon,
   .tulipeHurricane,
   .margarita,
   .flute {
-    display: flex;
     flex-direction: column;
   }
 
@@ -75,7 +116,6 @@
   .imgVerre3,
   .imgVerre4,
   .imgVerre5 {
-    width: 30vw;
-    border-radius: 10% 25%;
+    max-width: 300px;
   }
 }

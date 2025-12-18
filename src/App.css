@@ -1,29 +1,28 @@
 /* App Styles */
 .app-hero {
-  padding-top: 5rem;
-  padding-bottom: 8rem;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(12, 12, 29, 0.9) 0%, rgba(45, 27, 105, 0.7) 50%, rgba(12, 12, 29, 0.9) 100%);
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%);
 }
 
 .app-hero-content {
   text-align: center;
   max-width: 64rem;
   margin: 0 auto;
+  position: relative;
+  z-index: 10;
 }
 
 .app-hero-title {
   font-size: 3rem;
   font-family: var(--font-heading);
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--primary-400), var(--secondary-400), var(--accent-400));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  font-weight: var(--font-semibold);
+  color: var(--neutral-900);
+  margin-bottom: 1rem;
   letter-spacing: -0.02em;
+  line-height: var(--leading-tight);
 }
 
 @media (min-width: 640px) {
@@ -38,15 +37,26 @@
   }
 }
 
+/* Subtle accent line under title */
+.app-hero-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-500), var(--secondary-500));
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
 .app-hero-subtitle {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--neutral-600);
   margin-bottom: 2rem;
-  font-weight: 400;
+  font-weight: var(--font-regular);
   max-width: 48rem;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.8;
+  line-height: var(--leading-relaxed);
   font-family: var(--font-body);
 }
 
@@ -65,50 +75,37 @@
 }
 
 .app-hero-badge {
-  padding: 0.75rem 1.5rem;
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-backdrop);
+  padding: 0.625rem 1.25rem;
+  background: white;
+  border: 1px solid var(--neutral-200);
   border-radius: 9999px;
-  color: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.app-hero-badge::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: left 0.5s ease;
-}
-
-.app-hero-badge:hover::before {
-  left: 100%;
+  color: var(--neutral-700);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  font-family: var(--font-body);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
 }
 
 .app-hero-badge:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: var(--shadow-md);
   transform: translateY(-2px);
+  border-color: var(--primary-300);
+  color: var(--primary-600);
 }
 
+/* Subtle background decoration - very light */
 .app-hero-bg-1 {
   position: absolute;
   top: 10%;
   left: 5%;
   width: 20rem;
   height: 20rem;
-  background: radial-gradient(circle, var(--primary-500) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--primary-100) 0%, transparent 70%);
   border-radius: 50%;
   filter: blur(60px);
-  opacity: 0.4;
+  opacity: 0.3;
+  z-index: 1;
   animation: float 6s ease-in-out infinite;
 }
 
@@ -118,10 +115,11 @@
   right: 5%;
   width: 28rem;
   height: 28rem;
-  background: radial-gradient(circle, var(--secondary-500) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--secondary-100) 0%, transparent 70%);
   border-radius: 50%;
   filter: blur(80px);
-  opacity: 0.3;
+  opacity: 0.2;
+  z-index: 1;
   animation: float 8s ease-in-out infinite reverse;
 }
 
@@ -136,53 +134,60 @@
 
 .app-search-section {
   padding: 5rem 0;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+  background: white;
 }
 
 .app-search-title {
   font-size: 2.5rem;
-  font-family: 'Alex Brush', cursive;
-  background: linear-gradient(135deg, var(--primary-400), var(--accent-400));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-family: var(--font-heading);
+  font-weight: var(--font-semibold);
+  color: var(--neutral-900);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .app-search-subtitle {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--neutral-600);
   max-width: 32rem;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-family: var(--font-body);
+  line-height: var(--leading-relaxed);
 }
 
 .app-features-section {
   padding: 5rem 0;
+  background: var(--bg-tertiary);
 }
 
 .app-features-title {
   font-size: 2.5rem;
-  font-family: 'Alex Brush', cursive;
-  background: linear-gradient(135deg, var(--primary-400), var(--accent-400));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-family: var(--font-heading);
+  font-weight: var(--font-semibold);
+  color: var(--neutral-900);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .app-features-subtitle {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--neutral-600);
   max-width: 32rem;
   margin: 0 auto;
   margin-bottom: 4rem;
+  text-align: center;
+  font-family: var(--font-body);
+  line-height: var(--leading-relaxed);
 }
 
 .app-features-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 @media (min-width: 768px) {
@@ -193,29 +198,43 @@
 
 .app-feature-card {
   text-align: center;
-  padding: 2rem;
+  padding: 2.5rem;
   height: 100%;
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.app-feature-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
 }
 
 .app-feature-icon {
   width: 4rem;
   height: 4rem;
-  background: linear-gradient(135deg, var(--primary-500), var(--accent-500));
+  background: var(--primary-50);
+  border: 2px solid var(--primary-200);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
+  color: var(--primary-600);
 }
 
 .app-feature-title {
   font-size: 1.5rem;
-  font-family: 'Courgette', cursive;
-  color: white;
+  font-family: var(--font-heading);
+  font-weight: var(--font-medium);
+  color: var(--neutral-800);
   margin-bottom: 1rem;
 }
 
 .app-feature-description {
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
+  color: var(--neutral-600);
+  line-height: var(--leading-relaxed);
+  font-family: var(--font-body);
 }

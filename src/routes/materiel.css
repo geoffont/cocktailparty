@@ -1,22 +1,28 @@
 .mat_container {
-  background-image: linear-gradient(to right, rgba(9, 0, 0, 0.896), aliceblue);
-  }
+  background: white;
+  min-height: 100vh;
+}
 
 .first {
   padding: 5%;
 }
 
 .titleMateriel {
-  color: rgb(161, 116, 61);
-  font-size: 5rem;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  font-size: 3.5rem;
+  color: var(--neutral-900);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-family: var(--font-heading);
+  font-weight: var(--font-semibold);
+  padding-top: 8rem;
+  padding-bottom: 3rem;
+  text-align: center;
 }
 
 .completImg {
-  background-image: linear-gradient(aliceblue, rgba(9, 0, 0, 0.896));
-  border-radius: 10px;
+  background: white;
+  border-radius: var(--border-radius-xl);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
 }
 
 .uses {
@@ -29,59 +35,89 @@
 .textUses {
   width: 100%;
   font-size: 1.5rem;
-  font-weight: 400;
-  color: white;
+  font-weight: var(--font-regular);
+  font-family: var(--font-body);
+  color: var(--neutral-700);
+  line-height: var(--leading-relaxed);
 }
 
-:hover.shaker,
-:hover.concasseurGlace,
-:hover.cuillereMelange,
-:hover.doseurAlcool,
-:hover.mixeur,
-:hover.passoire,
-:hover.pilon,
-:hover.VerreDoseur,
-:hover.VerreMelangeur {
-  transition: transform 0.1s;
-  -ms-transform: scale(1.5);
-  /* IE 9 */
-  -webkit-transform: scale(1.5);
-  /* Safari 3-8 */
-  transform: scale(1.5);
+/* Hover effects for tool images */
+.shaker:hover,
+.concasseurGlace:hover,
+.cuillereMelange:hover,
+.doseurAlcool:hover,
+.mixeur:hover,
+.passoire:hover,
+.pilon:hover,
+.VerreDoseur:hover,
+.VerreMelangeur:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
 }
 
-.tool {
+.tool,
+.tool_mixeur,
+.toolconcasseur {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 80vw;
-  height: 40vh;
-  padding: 0% 5% 0% 5%;
-  border-bottom: 2px solid black;
+  max-width: 1200px;
+  min-height: 40vh;
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  background: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  border: 1px solid var(--neutral-200);
+}
+
+.tool:hover,
+.tool_mixeur:hover,
+.toolconcasseur:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.tool_mixeur {
+  min-height: 50vh;
+}
+
+.toolconcasseur {
+  border-bottom: none;
 }
 
 .titletool {
   text-align: center;
-  color: rgb(161, 116, 61);
+  color: var(--primary-600);
   font-size: 1.5rem;
-  text-shadow: 1px 1px 2px rgb(161, 116, 61);
+  font-family: var(--font-heading);
+  font-weight: var(--font-semibold);
+  text-shadow: none;
 }
 
 .titletool_verre {
-  font-size: 3rem;
-  color: rgb(232, 166, 86);
-  text-shadow: 1px 1px 2px rgb(161, 116, 61);
+  font-size: clamp(2rem, 3rem, 3rem);
+  color: var(--secondary-600);
+  font-family: var(--font-heading);
+  font-weight: var(--font-semibold);
+  text-shadow: none;
 }
 
 .paraph {
   font-size: 1.2rem;
   width: 50%;
-  font-weight: 600;
-  color: white;
+  font-weight: var(--font-regular);
+  font-family: var(--font-body);
+  color: var(--neutral-700);
+  line-height: var(--leading-relaxed);
 }
 
 .ImgTools {
-  box-shadow: 8px 2px 10px 5px rgba(245, 245, 245, 0.894);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--border-radius-sm);
+  transition: all 0.3s ease;
 }
 
 .tool_name {
@@ -94,37 +130,25 @@
   padding-left: 5%;
 }
 
-.tool_mixeur {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80vw;
-  height: 50vh;
-  padding: 0% 5% 0% 5%;
-  border-bottom: 2px solid black;
-}
-
-.toolconcasseur {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80vw;
-  height: 40vh;
-  padding: 0% 5% 0% 5%;
-}
-
 .toolVerre {
   height: 30vh;
   padding-bottom: 2%;
 }
 
 .tool_name_verre {
-  padding: 1%;
+  padding: 1rem;
   margin-left: 2%;
   margin-right: 2%;
-  background-color: rgb(161, 116, 61);
-  box-shadow: 2px 2px 2px 2px rgb(161, 116, 61);
-  border-radius: 10px;
+  background-color: var(--primary-50);
+  border: 1px solid var(--primary-200);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--border-radius-md);
+  transition: all 0.3s ease;
+}
+
+.tool_name_verre:hover {
+  background-color: var(--primary-100);
+  box-shadow: var(--shadow-md);
 }
 
 .shaker,
@@ -137,19 +161,67 @@
 .doseurAlcool,
 .concasseurGlace {
   width: 10vw;
+  max-width: 150px;
 }
 
-
-
 .ImgCocktails {
-  border-radius: 10px;
-  border-color: rgba(123, 115, 115, 0.975);
-  border-style: groove;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--neutral-300);
+  box-shadow: var(--shadow-sm);
 }
 
 .link {
-  color: yellow;
+  color: var(--primary-600);
+  font-weight: var(--font-medium);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
-.plscocktail{
-margin-top: 10%;
+
+.link:hover {
+  color: var(--primary-700);
+  text-decoration: underline;
+}
+
+.plscocktail {
+  margin-top: 10%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tool,
+  .tool_mixeur,
+  .toolconcasseur {
+    flex-direction: column;
+    width: 90vw;
+    padding: 2rem 1rem;
+  }
+
+  .paraph {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .tool_name {
+    width: 100%;
+    flex-direction: column;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .shaker,
+  .VerreMelangeur,
+  .VerreDoseur,
+  .mixeur,
+  .cuillereMelange,
+  .pilon,
+  .passoire,
+  .doseurAlcool,
+  .concasseurGlace {
+    width: 20vw;
+  }
+
+  .titleMateriel {
+    font-size: 2rem;
+    padding-top: 6rem;
+  }
 }
