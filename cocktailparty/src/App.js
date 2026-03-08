@@ -1,15 +1,16 @@
-import Header from "./components/header/Header";
-import SearchBar from "./components/search/Search";
-import "./App.css";
-import Footer from "./components/footer/Footer";
+import { Outlet } from 'react-router-dom';
+import { Box } from '@mui/material';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
+    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', bgcolor: 'background.default' }}>
       <Header />
-      <SearchBar />
+      <Box component="main" sx={{ flexGrow: 1 }}>
+        <Outlet />
+      </Box>
       <Footer />
-    </div>
+    </Box>
   );
 }
-export default App;

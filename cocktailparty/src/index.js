@@ -1,51 +1,32 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet
-} from "react-router-dom";
-import App from "./App";
-import Barman from "./routes/Barman";
-import Conseils from "./routes/Conseils";
-import Materiel from "./routes/Materiel";
-import Verre from "./routes/Verre";
-import "./components/header/navbar.css";
-
-const AppLayout = () => (
-  <>
-    <Outlet />
-  </>
-);
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import theme from './theme/theme';
+import App from './App';
+import Home from './pages/Home';
+import Search from './pages/Search';
+import CocktailDetail from './pages/CocktailDetail';
+import IngredientDetail from './pages/IngredientDetail';
+import './index.css';
 
 const router = createBrowserRouter([
   {
-    element: <AppLayout />,
+    path: '/',
+    element: <App />,
     children: [
-      {
-        path: "/",
-        element: <App />,
-      },
-      {
-        path: "Materiel",
-        element: <Materiel />,
-      },
-      {
-        path: "Conseils",
-        element: <Conseils />,
-      },
-      {
-        path: "Verre",
-        element: <Verre />,
-      },
-      {
-        path: "Barman",
-        element: <Barman />,
-      },
+      { index: true, element: <Home /> },
+      { path: 'search', element: <Search /> },
+      { path: 'cocktail/:id', element: <CocktailDetail /> },
+      { path: 'ingredient/:name', element: <IngredientDetail /> },
     ],
   },
 ]);
 
-createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+createRoot(document.getElementById('root')).render(
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    <RouterProvider router={router} />
+  </ThemeProvider>
 );
